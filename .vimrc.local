@@ -1,0 +1,43 @@
+UnBundle 'spf13/vim-autoclose'
+UnBundle 'spf13/vim-colors'
+UnBundle 'scrooloose/syntastic'
+UnBundle 'nathanaelkane/vim-indent-guides'
+UnBundle 'godlygeek/csapprox'
+UnBundle 'powerline/fonts'
+
+set nofoldenable                " disable code folding
+let g:DisableAutoPHPFolding = 1 " disable PIV's folding
+
+
+map  <Plug>(easymotion-prefix)/ <Plug>(easymotion-sn)
+omap <Plug>(easymotion-prefix)/ <Plug>(easymotion-tn)
+
+nnoremap <leader>b :CtrlPBuffer<Cr>
+nnoremap <leader>fr :CtrlPMRU<Cr>
+
+nnoremap <silent> <F3> :AckWindow <cword> /dev/null<CR>
+nnoremap <silent> <F4> :Ack <cword> .<CR>
+let g:ack_autoclose = 1
+
+hi link EasyMotionShade comment
+hi link EasyMotionIncSearch Statement
+
+set fileencodings=gbk,utf-8
+set enc=utf-8
+set fenc=gbk
+set mouse=v
+set cscopetag
+
+nnoremap <leader>fa :call cscope#findInteractive(expand('<cword>'))<CR>
+nnoremap <leader>l :call ToggleLocationList()<CR>
+nnoremap  <leader>fs :call cscope#find('s', expand('<cword>'))<CR>
+nnoremap  <leader>fg :call cscope#find('g', expand('<cword>'))<CR>
+nnoremap  <leader>fd :call cscope#find('d', expand('<cword>'))<CR>
+nnoremap  <leader>fc :call cscope#find('c', expand('<cword>'))<CR>
+nnoremap  <leader>ft :call cscope#find('t', expand('<cword>'))<CR>
+nnoremap  <leader>fe :call cscope#find('e', expand('<cword>'))<CR>
+nnoremap  <leader>ff :call cscope#find('f', expand('<cword>'))<CR>
+nnoremap  <leader>fi :call cscope#find('i', expand('<cword>'))<CR>
+
+
+

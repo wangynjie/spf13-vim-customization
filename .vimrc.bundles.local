@@ -1,0 +1,5 @@
+"Bundle 'vim-scripts/DrawIt'
+Bundle 'mihais/vim-mark'
+Bundle 'vim-scripts/cscope.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/autoload_cscope.vim'
